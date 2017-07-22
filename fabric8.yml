@@ -1,0 +1,11 @@
+---
+buildName: "dotnetapp"
+links:
+  Git: "http://gogs/gogsadmin/dotnetapp.git"
+  Job: "http://192.168.64.3:31412/job/dotnetapp"
+  Production: "http://10.0.0.171:80/kubernetes/pods?namespace=default-production"
+  Staging: "http://10.0.0.171:80/kubernetes/pods?namespace=default-staging"
+environments:
+  Staging: "default-staging"
+  Production: "default-production"
+useLocalFlow: true
