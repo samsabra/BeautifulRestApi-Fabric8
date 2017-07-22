@@ -30,7 +30,7 @@ namespace dotnet_example
 
             app.Run(async (context) =>
             {
-                await context.Response.WriteAsync("Hello from the fabric8 .Net example!");
+                await context.Response.WriteAsync("Way too cool for school!");
             });
         }
     }
