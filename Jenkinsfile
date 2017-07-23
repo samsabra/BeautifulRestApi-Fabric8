@@ -4,6 +4,7 @@
 def utils = new io.fabric8.Utils()
 
 clientsNode{
+  def envTesting = utils.environmentNamespace('testing')
   def envStage = utils.environmentNamespace('staging')
   def envProd = utils.environmentNamespace('production')
   def newVersion = ''
@@ -25,6 +26,9 @@ clientsNode{
     version = newVersion
     imageName = clusterImageName
   }
+
+  stage 'Rollout Testing'
+  kubernetesApply(file: rc, environment: envTesting)
 
   stage 'Rollout Staging'
   kubernetesApply(file: rc, environment: envStage)
