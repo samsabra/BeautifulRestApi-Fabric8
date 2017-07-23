@@ -108,6 +108,13 @@ namespace BeautifulRestApi
                 Body = "idk yet. something w/ the Infinity Stones?"
             });
 
+            context.Comments.Add(new Models.CommentEntity
+            {
+                Id = Guid.Parse("91eba64f-22db-47c3-b01b-38a1ba8ad84a"),
+                CreatedAt = DateTimeOffset.UtcNow,
+                Conversation = conv2,
+                Body = "What's going on?"
+            });
             context.SaveChanges();
         }
     }
